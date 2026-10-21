@@ -1,23 +1,106 @@
 aid: teejlab
+
 name: TeejLab
-description: 'TeejLab is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://16.52.171.21/wp-content/uploads/2020/11/Component-2.png
+
+description: TeejLab provides an API management platform that includes discovery of hidden APIs, automated security testing, a marketplace for
+  consolidating external APIs, access‑control and monetization for public and private APIs, and end‑to‑end lifecycle governance. The platform
+  is aimed at enterprises, entrepreneurs and large companies that develop, consume or monetize APIs.
+
 url: https://raw.githubusercontent.com/api-evangelist/teejlab/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
-- Company
-apis: []
+- API Discovery
+- API Security
+- API Governance
+- API Marketplace
+- API Monetization
+- DevSecOps
+- Compliance
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/teejlab-plans-pricing.yml
+- type: Spectral
+  url: rules/teejlab-rules.yml
+- type: JSONLD
+  url: json-ld/teejlab-context.jsonld
+- type: Vocabulary
+  url: vocabulary/teejlab-vocabulary.yml
+- type: DataModel
+  url: data-model/teejlab-data-model.yml
+- type: Conformance
+  url: conformance/teejlab-conformance.yml
+- type: LLMsTxt
+  url: llms/teejlab-llms.txt
+- type: Hosts
+  url: hosts/teejlab-hosts.yml
+- type: TermsOfService
+  url: https://teejlab.com/terms
+- type: Security
+  url: https://teejlab.com/tag/security/
+- type: PrivacyPolicy
+  url: https://teejlab.com/privacy
+- type: Pricing
+  url: https://teejlab.com/pricing/
+- type: Login
+  url: https://apidiscovery.teejlab.com/accounts/login/
+- type: Blog
+  url: https://teejlab.com/blog/
+- type: APIReference
+  url: https://apidiscovery.teejlab.com/edsn/apidocs/
+- type: GitHubOrganization
+  url: https://github.com/teejlab
+- type: DomainSecurity
+  url: security/teejlab-domain-security.yml
 - type: Website
   url: https://teejlab.com/
+
+apis:
+- aid: teejlab:teejlab-api
+  name: TeejLab API
+  description: 'TeejLab API as documented publicly: 29 operations. Contract generated from the documentation by API Evangelist (2026-10-21); not
+    the provider''s own document.'
+  humanURL: https://apidiscovery.teejlab.com/edsn/apidocs
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/teejlab-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/teejlab-get-edsn-api-scanned-projects-response-schema.json
+  - type: JSONSchema
+    url: json-schema/teejlab-get-edsn-api-endpoint-search-response-schema.json
+  - type: JSONSchema
+    url: json-schema/teejlab-post-edsn-api-cvesearch-response-schema.json
+  - type: JSONSchema
+    url: json-schema/teejlab-get-edsn-api-networks-user-scans-response-schema.json
+  - type: JSONSchema
+    url: json-schema/teejlab-post-edsn-api-cvesearch-request2-schema.json
+  - type: JSONSchema
+    url: json-schema/teejlab-get-edsn-api-endpoint-parameter-response-schema.json
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 23
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

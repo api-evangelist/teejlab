@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teejlab/main/json-schema/teejlab-get-edsn-api-networks-user-scans-response-schema.json",
+  "title": "GetEdsnApiNetworksUserScansResponse",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/teejlab-openapi-generated.yml#/components/schemas/GetEdsnApiNetworksUserScansResponse",
+  "type": "object",
+  "properties": {
+    "scan_details": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "instance_id": {
+            "type": "string"
+          },
+          "repo_id": {
+            "type": "string"
+          },
+          "start_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "end_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "network_name": {
+            "type": "string"
+          },
+          "project_name": {
+            "type": "string"
+          },
+          "organization": {
+            "type": "string"
+          },
+          "nic_ip": {
+            "type": "string"
+          },
+          "nic_name": {
+            "type": "string"
+          },
+          "mac_address": {
+            "type": "string"
+          },
+          "scan_status": {
+            "type": "string"
+          },
+          "scan_data_send_freq": {
+            "type": "string"
+          },
+          "review_status": {
+            "type": "string"
+          },
+          "is_approved": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

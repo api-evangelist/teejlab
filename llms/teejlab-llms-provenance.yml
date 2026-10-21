@@ -1,0 +1,6 @@
+generated: '2026-10-21'
+method: probed
+generator: harvest-llms.py
+source: https://apidiscovery.teejlab.com/edsn/knowledgebase/
+bytes: 112467
+note: saved verbatim; the provider's own document

@@ -1,0 +1,1257 @@
+openapi: 3.1.0
+info:
+  title: TeejLab API
+  version: '2026-10-21'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-21: 29 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; TeejLab has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 22
+    documentation: 7
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-21'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://apidiscovery.teejlab.com/edsn/apidocs
+paths:
+  /edsn/api/agreements/id:
+    get:
+      operationId: get_edsn_api_agreements_id
+      tags:
+      - Edsn
+      summary: GET /edsn/api/agreements/id
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiAgreementsIdResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET  ''https://apidiscovery.teejlab.com/edsn/api/agreements/id?api_id=iiBab''  -H ''api-key: ************************'''
+  /edsn/api/agreements/name:
+    get:
+      operationId: get_edsn_api_agreements_name
+      tags:
+      - Edsn
+      summary: GET /edsn/api/agreements/name
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: api_name
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiAgreementsNameResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET  ''https://apidiscovery.teejlab.com/edsn/api/agreements/name?api_name=DepartmentAPI''  -H ''api-key: ************************'''
+  /edsn/api/agreements/time:
+    get:
+      operationId: get_edsn_api_agreements_time
+      tags:
+      - Edsn
+      summary: GET /edsn/api/agreements/time
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: end_date
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: start_date
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiAgreementsTimeResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET  ''https://apidiscovery.teejlab.com/edsn/api/agreements/time?start_date=2023-01-25&end_date=2023-04-15''  -H ''api-key:
+          ************************'''
+  /edsn/api/benchmark/rate_limiting_result:
+    get:
+      operationId: get_edsn_api_benchmark_rate_limiting_result
+      tags:
+      - Edsn
+      summary: This endpoint returns the rate limit test result of an endpoint.
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: endpoint_id
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Endpoint ID
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiBenchmarkRateLimitingResultResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_edsn_api_benchmark_rate_limiting_result
+      tags:
+      - Edsn
+      summary: POST /edsn/api/benchmark/rate_limiting_result
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEdsnApiBenchmarkRateLimitingResultResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  'https://apidiscovery.teejlab.com/edsn/api/benchmark/rate_limiting_result'  -H 'api-key: ************************'\
+          \  -H 'content-type: multipart/form-data;'  -F endpoint_id=ZMVbc\n This endpoint returns the rate limit test result of an endpoint.\n\
+          \ GET \n https://apidiscovery.teejlab.com/edsn/api/benchmark/rate_limiting_result \nResult example :\n{\n \"datetime\": \"06/02/2020\"\
+          ,\n \"result\": \"the"
+  /edsn/api/benchmark/rate_limiting_test:
+    post:
+      operationId: post_edsn_api_benchmark_rate_limiting_test
+      tags:
+      - Edsn
+      summary: POST /edsn/api/benchmark/rate_limiting_test
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEdsnApiBenchmarkRateLimitingTestResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  'https://apidiscovery.teejlab.com/edsn/api/benchmark/rate_limiting_test'  -H 'api-key: ************************'\
+          \  -H 'content-type: multipart/form-data;'  --form endpoint_id=ZMVbc\n This test is designed to check whether an API is protected against\
+          \ excessive amount of calls or being choked by excessive payload sizes. \n This test can take a while to perform.\n This endpoint performs\
+          \ the"
+  /edsn/api/benchmark/upload_swagger:
+    post:
+      operationId: post_edsn_api_benchmark_upload_swagger
+      tags:
+      - Edsn
+      summary: POST /edsn/api/benchmark/upload_swagger
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEdsnApiBenchmarkUploadSwaggerResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  'https://apidiscovery.teejlab.com/edsn/api/benchmark/upload_swagger'  -H 'Content-Type: application/x-www-form-urlencoded'\
+          \  -H 'api-key: *************************'  -H 'vendor=Test_org_vendor'  -H 'category=Finance & Banking'  -F 'file=@/Users/Downloads/swagger.json'\
+          \ \n This endpoint imports an API by uploading a swagger file containing existing vendor and category information.\n POST "
+  /edsn/api/categories:
+    get:
+      operationId: get_edsn_api_categories
+      tags:
+      - Edsn
+      summary: GET /edsn/api/categories
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiCategoriesResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/categories'  -H 'api-key: ************************'\n This endpoint\
+          \ returns the information about the API categories in our platform.\n GET \n https://apidiscovery.teejlab.com/edsn/api/categories \n\
+          Result example :\n[\n \"Artificial Intelligence & Data Science\",\n \"Business & Technology\",\n \"eCommerce & Trade\",\n \"Environment\
+          \ & Weather\",\n \"Finance & Ba"
+  /edsn/api/cvesearch:
+    post:
+      operationId: post_edsn_api_cvesearch
+      tags:
+      - Edsn
+      summary: POST /edsn/api/cvesearch
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostEdsnApiCvesearchRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEdsnApiCvesearchResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  'https://apidiscovery.teejlab.com/edsn/api/cvesearch/'  -H 'api-key: ************************'  --data-raw '{\n\
+          \ \"search_term\": \"microsoft\",\n \"cvssv2_filter\": \" 2010\"\n }'\n POST https://apidiscovery.teejlab.com/edsn/api/cvesearch/ \n\
+          Result example :\n{\n \"Content-Type\": \"application/json\",\n \"mapping\": {\n \"num_results\": \"42\",\n \"processed_search_term\"\
+          : \"microsoft \",\n \"search_term\": \"microsof"
+  /edsn/api/cvesearch/:
+    post:
+      operationId: post_edsn_api_cvesearch
+      tags:
+      - Edsn
+      summary: This endpoint searches the NIST CVE database.
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostEdsnApiCvesearchRequest2'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEdsnApiCvesearchResponse2'
+      x-evidence:
+        kind: documentation
+  /edsn/api/cvesearch/cve/products:
+    get:
+      operationId: get_edsn_api_cvesearch_cve_products
+      tags:
+      - Edsn
+      summary: GET /edsn/api/cvesearch/cve/products
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: cve_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiCvesearchCveProductsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/cvesearch/cve/products?cve_id=CVE-2019-10140'  -H 'api-key: ************************'\n\
+          \ GET https://apidiscovery.teejlab.com/edsn/api/cvesearch/cve/products \nResult example :\n{\n \"associated_products\": [\n \"linux\
+          \ linux_kernel 2.6.16.60\",\n \"linux linux_kernel 2.6.16.19\",\n \"linux linux_kernel 3.0.94\",\n \"linux linux_kernel 3.0.49\",\n\
+          \ \"linux linux_ke"
+  /edsn/api/cvesearch/vendor/products:
+    get:
+      operationId: get_edsn_api_cvesearch_vendor_products
+      tags:
+      - Edsn
+      summary: GET /edsn/api/cvesearch/vendor/products
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: vendor
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiCvesearchVendorProductsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/cvesearch/vendor/products?vendor=Microsoft'  -H 'api-key: ************************'\n\
+          \ GET https://apidiscovery.teejlab.com/edsn/api/cvesearch/vendor/products \nResult example :\n{\n \"products\": [\n \"office\",\n \"\
+          wins\",\n \"active_directory_lightweight_directory_service\",\n \"adam\",\n \"organization_chart\",\n \"windows_2003_server\",\n \"\
+          sql_server_2016\",\n \"sec"
+  /edsn/api/cvesearch/vendors:
+    get:
+      operationId: get_edsn_api_cvesearch_vendors
+      tags:
+      - Edsn
+      summary: GET /edsn/api/cvesearch/vendors
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiCvesearchVendorsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/cvesearch/vendors/'  -H 'api-key: ************************' \n GET https://apidiscovery.teejlab.com/edsn/api/cvesearch/vendors/\
+          \ \nResult example :\n{\n \"vendors\": [\n \"priorswood\",\n \"clever_components\",\n \"todoomasters\",\n \"overlay_weaver\",\n \"dominic_gamble\"\
+          ,\n \"foxmail\",\n \"niushop\",\n \"redirection\",\n .....\n ]\n}\n This endpoint returns all the vendors "
+  /edsn/api/cvesearch/vendors/:
+    get:
+      operationId: get_edsn_api_cvesearch_vendors
+      tags:
+      - Edsn
+      summary: This endpoint returns all the vendors in the NIST CVE.
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiCvesearchVendorsResponse2'
+      x-evidence:
+        kind: documentation
+  /edsn/api/data_example:
+    get:
+      operationId: get_edsn_api_data_example
+      tags:
+      - Edsn
+      summary: GET /edsn/api/data_example
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: endpoint_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiDataExampleResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/data_example?endpoint_id=ZMVbc'  -H 'api-key: *************************'\n\
+          \ This endpoint returns an example response of an endpoint.\n GET https://apidiscovery.teejlab.com/edsn/api/data_example \nResult example\
+          \ :\n{\n \"output_response\": \"Canada is a country in the northern part of North America.\" ,\n \"endpoint_id\": \"ZMVbc\",\n \"input_parameters\"\
+          : {\n "
+  /edsn/api/endpoint_list:
+    get:
+      operationId: get_edsn_api_endpoint_list
+      tags:
+      - Edsn
+      summary: GET /edsn/api/endpoint_list
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiEndpointListResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/endpoint_list'  -H 'api-key: *************************'\n This endpoint\
+          \ retrieves all the endpoint information accessible in the platform.\n GET https://apidiscovery.teejlab.com/edsn/api/endpoint_list \n\
+          Result example :\n[\n {\n \"id\": 21,\n \"endpoint\": \"http://api.openweathermap.org/data/2.5/weather\",\n \"method\": \"get\",\n \"\
+          description\": \"Access curren"
+  /edsn/api/endpoint_parameter:
+    get:
+      operationId: get_edsn_api_endpoint_parameter
+      tags:
+      - Edsn
+      summary: GET /edsn/api/endpoint_parameter
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: endpoint_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiEndpointParameterResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/endpoint_parameter?endpoint_id=ZMVbc'  -H 'api-key: *************************'\n\
+          \ This endpoint returns the parameters needed to make a request of an endpoint.\n GET https://apidiscovery.teejlab.com/edsn/api/endpoint_parameter\
+          \ \nResult example :\n{\n \"parameter\": [\n {\n \"parameter_example_value\": \"5\",\n \"is_required\": false,\n \"parameter_default_value"
+  /edsn/api/endpoint_search:
+    get:
+      operationId: get_edsn_api_endpoint_search
+      tags:
+      - Edsn
+      summary: GET /edsn/api/endpoint_search
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: api_type
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiEndpointSearchResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/endpoint_search?q=&size=1&page=1&api_type=all_apis'  -H 'api-key: *************************'\n\
+          \ This endpoint retrieves a list of endpoints based on the parameters provided.\n GET https://apidiscovery.teejlab.com/edsn/api/endpoint_search\
+          \ \nResult example :\n{\n \"num_results\": 10,\n \"num_pages\": 10,\n \"current_page\": 1,\n \"page_size\": 1,\n \"endpoints\": "
+  /edsn/api/gateway:
+    post:
+      operationId: post_edsn_api_gateway
+      tags:
+      - Edsn
+      summary: POST /edsn/api/gateway
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: endpoint_id
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostEdsnApiGatewayRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEdsnApiGatewayResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  'https://apidiscovery.teejlab.com/edsn/api/gateway?endpoint_id=ZMVbc'  -H 'api-key: *************************'\
+          \  -d '{\"i\":\"canada\",\"timeout\":\"5\"}'\n This endpoint allows the user to call an endpoint in the platform. \n POST https://apidiscovery.teejlab.com/edsn/api/gateway\
+          \ \nResult example :\n\"Canada is a country in the northern part of North America.\"\n PARAMETERS \n Field \n Placement \n De"
+  /edsn/api/networks/user_scan_mappings:
+    get:
+      operationId: get_edsn_api_networks_user_scan_mappings
+      tags:
+      - Edsn
+      summary: GET /edsn/api/networks/user_scan_mappings
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiNetworksUserScanMappingsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/networks/user_scan_mappings/'  -H 'api-key: ************************'\
+          \  -H 'Content-Type: application/form-data'  -F 'instance_id=iiib'\n GET https://apidiscovery.teejlab.com/edsn/api/networks/user_scan_mappings/\
+          \ \nResult example :\n{\n \"scan_mappings\": {\n \"network_name\": \"TestGateway\",\n \"project_name\": \"TestProject\",\n \"repo_id\"\
+          : \"gAAAAABkmi_lQyFY"
+  /edsn/api/networks/user_scan_mappings/:
+    get:
+      operationId: get_edsn_api_networks_user_scan_mappings
+      tags:
+      - Edsn
+      summary: This endpoint returns the mappings of a gateway scan instance.
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiNetworksUserScanMappingsResponse2'
+      x-evidence:
+        kind: documentation
+  /edsn/api/networks/user_scans:
+    get:
+      operationId: get_edsn_api_networks_user_scans
+      tags:
+      - Edsn
+      summary: GET /edsn/api/networks/user_scans
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiNetworksUserScansResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/networks/user_scans/'  -H 'api-key: ************************'\n GET\
+          \ https://apidiscovery.teejlab.com/edsn/api/networks/user_scans/ \nResult example :\n{\n \"scan_details\": [\n {\n \"instance_id\":\
+          \ \"gAAAAABkmi4aMBfcdnuzFurEE8ZmxhSR3Qj5a90BZZVLtoEDcAAZ21krhjuiI-oXJ12AhyPL-ebyVvzvniP8S6X7bKpiDidzCg==\",\n \"repo_id\": \"gAAAAABkmi4a6xhHTxTZpmavLwPADbR8tjN9Mqf"
+  /edsn/api/networks/user_scans/:
+    get:
+      operationId: get_edsn_api_networks_user_scans
+      tags:
+      - Edsn
+      summary: This endpoint returns the details of the scanned gateway scanned by the scanner client.
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiNetworksUserScansResponse2'
+      x-evidence:
+        kind: documentation
+  /edsn/api/scanned/gateway_sbom:
+    get:
+      operationId: get_edsn_api_scanned_gateway_sbom
+      tags:
+      - Edsn
+      summary: GET /edsn/api/scanned/gateway_sbom
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: repo_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/scanned/gateway_sbom?repo_id=iiib'  -H 'api-key: ************************'\n\
+          \ This endpoint returns the bill of materials of the scanned gateway scanned by the scanner client in CycloneDX format. \n Either repo_id\
+          \ or some combination of the other parameters are required. If you choose the combination of the other parameters,\n multiple projects\
+          \ m"
+  /edsn/api/scanned/projects:
+    get:
+      operationId: get_edsn_api_scanned_projects
+      tags:
+      - Edsn
+      summary: GET /edsn/api/scanned/projects
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: project_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiScannedProjectsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/scanned/projects?project_id=iiib'  -H 'api-key: ************************'\n\
+          \ This endpoint returns the details of the scanned project scanned by the scanner client.\n GET \n https://apidiscovery.teejlab.com/edsn/api/scanned/projects\
+          \ \nResult example :\n{\n \"project_id\": \"gAAAAABkmhm5Bm1jwLk7zNTj_RtSsLfdRBaVqFlqrFcu2L5_N0LiIC5t-z4zhIRamhQna6PEyaQ34je"
+  /edsn/api/scanned/sbom:
+    get:
+      operationId: get_edsn_api_scanned_sbom
+      tags:
+      - Edsn
+      summary: GET /edsn/api/scanned/sbom
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: project_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/scanned/sbom?project_id=iiib'  -H 'api-key: ************************'\n\
+          \ This endpoint returns the bill of materials of the scanned project scanned by the scanner client in CycloneDX format. \n Either project_id\
+          \ or some combination of the other parameters are required. If you choose the combination of the other parameters,\n multiple projects\
+          \ may"
+  /edsn/api/search/time:
+    get:
+      operationId: get_edsn_api_search_time
+      tags:
+      - Edsn
+      summary: This endpoint returns the most recent API's added between a start and end date.
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: start_date
+        in: query
+        required: true
+        schema:
+          type: string
+        description: YYYY-MM-DD
+      - name: end_date
+        in: query
+        required: true
+        schema:
+          type: string
+        description: YYYY-MM-DD
+      - name: api_name
+        in: query
+        required: false
+        schema:
+          type: string
+        description: API Name
+      - name: vendor_name
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Vendor Name
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiSearchTimeResponse'
+      x-evidence:
+        kind: documentation
+  /edsn/api/search/vendor:
+    get:
+      operationId: get_edsn_api_search_vendor
+      tags:
+      - Edsn
+      summary: This endpoint retrieves a list of Vendors based on the parameters provided.
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      parameters:
+      - name: q
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Query
+      - name: start_date
+        in: query
+        required: false
+        schema:
+          type: string
+        description: YYYY-MM-DD
+      - name: end_date
+        in: query
+        required: false
+        schema:
+          type: string
+        description: YYYY-MM-DD
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The number of endpoints to include per page. Default is 10
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The page number. Default is 1
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEdsnApiSearchVendorResponse'
+      x-evidence:
+        kind: documentation
+  /edsn/api/vendor/search:
+    get:
+      operationId: get_edsn_api_vendor_search
+      tags:
+      - Edsn
+      summary: GET /edsn/api/vendor/search
+      x-source: https://apidiscovery.teejlab.com/edsn/apidocs
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  'https://apidiscovery.teejlab.com/edsn/api/vendor/search?q=\"test\"  -H 'api-key: ************************'\n This\
+          \ endpoint retrieves a list of Vendors based on the parameters provided.\n GET \n https://apidiscovery.teejlab.com/edsn/api/search/vendor\
+          \ \nResult example :\n{\n \"num_results\": 50,\n \"num_pages\": 25,\n \"current_page\": 1,\n \"page_size\": 2,\n \"vendors\": [\n {\n\
+          \ \"encrypted_id\": \"gAAAAABoomb"
+components:
+  schemas:
+    GetEdsnApiAgreementsIdResponse:
+      type: object
+      properties:
+        api_name:
+          type: string
+        description:
+          type: string
+        agreements:
+          type: array
+          items:
+            type: object
+            properties:
+              agreement_name:
+                type: string
+              agreement_link:
+                type: string
+    GetEdsnApiAgreementsNameResponse:
+      type: object
+      properties:
+        api_name:
+          type: string
+        description:
+          type: string
+        agreements:
+          type: array
+          items:
+            type: object
+            properties:
+              agreement_name:
+                type: string
+              agreement_link:
+                type: string
+    GetEdsnApiAgreementsTimeResponse:
+      type: object
+      properties:
+        API Name:
+          type: string
+        Description:
+          type: string
+        API ID:
+          type:
+          - string
+          - 'null'
+        Category Name:
+          type: string
+        Vendor Name:
+          type: string
+        Datetime Created:
+          type: string
+    GetEdsnApiBenchmarkRateLimitingResultResponse:
+      type: object
+      properties:
+        datetime:
+          type: string
+          description: Date of the result
+        result:
+          type: string
+          description: Result description
+        test_case:
+          type: string
+          description: Test case details
+    PostEdsnApiBenchmarkRateLimitingResultResponse:
+      type: object
+      properties:
+        datetime:
+          type: string
+        result:
+          type: string
+        test_case:
+          type: string
+    PostEdsnApiBenchmarkRateLimitingTestResponse:
+      type: object
+      properties:
+        result:
+          type: string
+        info:
+          type: integer
+    PostEdsnApiBenchmarkUploadSwaggerResponse:
+      type: object
+      properties:
+        info:
+          type: string
+        result:
+          type: string
+    GetEdsnApiCategoriesResponse:
+      type: object
+      properties:
+        api_name:
+          type: string
+        description:
+          type: string
+        agreements:
+          type: array
+          items:
+            type: object
+            properties:
+              agreement_name:
+                type: string
+              agreement_link:
+                type: string
+    PostEdsnApiCvesearchRequest:
+      type: object
+      properties:
+        search_term:
+          type: string
+        cvssv2_filter:
+          type: string
+    PostEdsnApiCvesearchResponse:
+      type: object
+      properties:
+        Content-Type:
+          type: string
+        mapping:
+          type: object
+          properties:
+            num_results:
+              type: string
+            processed_search_term:
+              type: string
+            search_term:
+              type: string
+            vulnerabilities:
+              type: array
+              items:
+                type: object
+                properties:
+                  cve_description:
+                    type: string
+                  cve_id:
+                    type: string
+                  vendor:
+                    type: string
+                  cvssv2_score:
+                    type: string
+                  version:
+                    type: string
+                  cvssv3_severity:
+                    type: string
+                  cvssv2_severity:
+                    type: string
+                  cvssv3_score:
+                    type: string
+                  year_published:
+                    type: integer
+                  product:
+                    type: string
+        Content-Length:
+          type: integer
+    PostEdsnApiCvesearchRequest2:
+      type: object
+      properties:
+        search_term:
+          type: string
+          description: Search term used in the NIST CVE database
+        cvssv2_filter:
+          type: string
+          description: Optional numeric [float] parameter for cvssv2_score filtering
+        cvssv3_filter:
+          type: string
+          description: Optional numeric [float] parameter for cvssv3_score filtering
+        year_published:
+          type: string
+          description: Optional numeric [int] parameter for year_published filtering
+      required:
+      - search_term
+    PostEdsnApiCvesearchResponse2:
+      type: object
+      properties:
+        mapping:
+          type: string
+          description: Result mapping object
+    GetEdsnApiCvesearchCveProductsResponse:
+      type: object
+      properties:
+        associated_products:
+          type: array
+          items:
+            type: string
+    GetEdsnApiCvesearchVendorProductsResponse:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            type: string
+    GetEdsnApiCvesearchVendorsResponse:
+      type: object
+      properties:
+        vendors:
+          type: array
+          items:
+            type: string
+    GetEdsnApiCvesearchVendorsResponse2:
+      type: object
+      properties:
+        vendors:
+          type: string
+          description: Array of vendor names
+    GetEdsnApiDataExampleResponse:
+      type: object
+      properties:
+        output_response:
+          type: string
+        endpoint_id:
+          type: string
+        input_parameters:
+          type: object
+          properties:
+            i:
+              type: string
+            timeout:
+              type: string
+    GetEdsnApiEndpointListResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        endpoint:
+          type: string
+        method:
+          type: string
+        description:
+          type: string
+    GetEdsnApiEndpointParameterResponse:
+      type: object
+      properties:
+        parameter:
+          type: array
+          items:
+            type: object
+            properties:
+              parameter_example_value:
+                type: string
+              is_required:
+                type: boolean
+              parameter_default_value:
+                type: string
+              parameter_placement:
+                type: string
+              parameter_name:
+                type: string
+              parameter_description:
+                type: string
+        description:
+          type: string
+        endpoint_name:
+          type: string
+        method:
+          type: string
+    GetEdsnApiEndpointSearchResponse:
+      type: object
+      properties:
+        num_results:
+          type: integer
+        num_pages:
+          type: integer
+        current_page:
+          type: integer
+        page_size:
+          type: integer
+        endpoints:
+          type: array
+          items:
+            type: object
+            properties:
+              vendor:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  image_vendor_name:
+                    type: string
+                  encrypted_id:
+                    type: string
+              category:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  image:
+                    type: string
+                  encrypted_id:
+                    type: string
+              vendor_licenses:
+                type: array
+                items: {}
+              api_licenses:
+                type: array
+                items: {}
+              auth_types:
+                type: array
+                items:
+                  type: string
+              is_public_api:
+                type: boolean
+              id:
+                type: integer
+              name:
+                type: string
+              version:
+                type: string
+              homepage:
+                type: string
+              is_implemented:
+                type: boolean
+              is_claiming:
+                type: boolean
+              can_claim:
+                type: boolean
+              countries:
+                type: array
+                items: {}
+              country_names:
+                type: array
+                items: {}
+              encrypted_id:
+                type: string
+              num_agreements_restricted:
+                type: boolean
+    PostEdsnApiGatewayRequest:
+      type: object
+      properties:
+        i:
+          type: string
+        timeout:
+          type: string
+    PostEdsnApiGatewayResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        endpoint:
+          type: string
+        method:
+          type: string
+        description:
+          type: string
+    GetEdsnApiNetworksUserScanMappingsResponse:
+      type: object
+      properties:
+        result:
+          type: string
+        info:
+          type: integer
+    GetEdsnApiNetworksUserScanMappingsResponse2:
+      type: object
+      properties:
+        scan_mappings:
+          type: string
+          description: Mapping object
+    GetEdsnApiNetworksUserScansResponse:
+      type: object
+      properties:
+        scan_details:
+          type: array
+          items:
+            type: object
+            properties:
+              instance_id:
+                type: string
+              repo_id:
+                type: string
+              start_time:
+                type: string
+                format: date-time
+              end_time:
+                type: string
+                format: date-time
+              network_name:
+                type: string
+              project_name:
+                type: string
+              organization:
+                type: string
+              nic_ip:
+                type: string
+              nic_name:
+                type: string
+              mac_address:
+                type: string
+              scan_status:
+                type: string
+              scan_data_send_freq:
+                type: string
+              review_status:
+                type: string
+              is_approved:
+                type: string
+    GetEdsnApiNetworksUserScansResponse2:
+      type: object
+      properties:
+        scan_details:
+          type: string
+          description: Array of scan detail objects
+    GetEdsnApiScannedProjectsResponse:
+      type: object
+      properties:
+        project_id:
+          type: string
+        project_name:
+          type: string
+        datetime_created:
+          type: string
+          format: date-time
+        scan_details:
+          type: array
+          items:
+            type: object
+            properties:
+              endpoint_url:
+                type: string
+              api_name:
+                type: string
+              api_version:
+                type: string
+              vendor_name:
+                type: string
+              endpoint_method:
+                type: string
+              response_metadata:
+                type: object
+                properties:
+                  Via:
+                    type: string
+                  Date:
+                    type: string
+                  Allow:
+                    type: string
+                  Server:
+                    type: string
+                  Connection:
+                    type: string
+                  Content-Type:
+                    type: string
+                  Content-Length:
+                    type: string
+                  Referrer-Policy:
+                    type: string
+                  X-Frame-Options:
+                    type: string
+                  X-Content-Type-Options:
+                    type: string
+              agreements:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    link:
+                      type: string
+              server_info:
+                type: object
+                properties:
+                  server:
+                    type: string
+                  hostcity:
+                    type: string
+                  hostcountry:
+                    type: string
+                  hostregion:
+                    type: string
+                  hostisp:
+                    type: string
+                  timezone:
+                    type: string
+        review status:
+          type: string
+    GetEdsnApiSearchTimeResponse:
+      type: object
+      properties:
+        API Name:
+          type: string
+          description: Name of the API
+        Description:
+          type: string
+          description: API description
+        API ID:
+          type: string
+          description: Identifier
+        Category Name:
+          type: string
+          description: Category
+        Vendor Name:
+          type: string
+          description: Vendor
+        Datetime Created:
+          type: string
+          description: Creation date
+    GetEdsnApiSearchVendorResponse:
+      type: object
+      properties:
+        num_results:
+          type: string
+          description: Total results
+        num_pages:
+          type: string
+          description: Total pages
+        current_page:
+          type: string
+          description: Current page number
+        page_size:
+          type: string
+          description: Page size
+        vendors:
+          type: string
+          description: Array of vendor objects
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: api-key
+security:
+- apiKey: []
+tags:
+- name: Edsn

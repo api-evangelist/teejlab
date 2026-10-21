@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teejlab/main/json-schema/teejlab-get-edsn-api-endpoint-search-response-schema.json",
+  "title": "GetEdsnApiEndpointSearchResponse",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/teejlab-openapi-generated.yml#/components/schemas/GetEdsnApiEndpointSearchResponse",
+  "type": "object",
+  "properties": {
+    "num_results": {
+      "type": "integer"
+    },
+    "num_pages": {
+      "type": "integer"
+    },
+    "current_page": {
+      "type": "integer"
+    },
+    "page_size": {
+      "type": "integer"
+    },
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "vendor": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "image_vendor_name": {
+                "type": "string"
+              },
+              "encrypted_id": {
+                "type": "string"
+              }
+            }
+          },
+          "category": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "encrypted_id": {
+                "type": "string"
+              }
+            }
+          },
+          "vendor_licenses": {
+            "type": "array",
+            "items": {}
+          },
+          "api_licenses": {
+            "type": "array",
+            "items": {}
+          },
+          "auth_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "is_public_api": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "homepage": {
+            "type": "string"
+          },
+          "is_implemented": {
+            "type": "boolean"
+          },
+          "is_claiming": {
+            "type": "boolean"
+          },
+          "can_claim": {
+            "type": "boolean"
+          },
+          "countries": {
+            "type": "array",
+            "items": {}
+          },
+          "country_names": {
+            "type": "array",
+            "items": {}
+          },
+          "encrypted_id": {
+            "type": "string"
+          },
+          "num_agreements_restricted": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teejlab/main/json-schema/teejlab-get-edsn-api-endpoint-parameter-response-schema.json",
+  "title": "GetEdsnApiEndpointParameterResponse",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/teejlab-openapi-generated.yml#/components/schemas/GetEdsnApiEndpointParameterResponse",
+  "type": "object",
+  "properties": {
+    "parameter": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parameter_example_value": {
+            "type": "string"
+          },
+          "is_required": {
+            "type": "boolean"
+          },
+          "parameter_default_value": {
+            "type": "string"
+          },
+          "parameter_placement": {
+            "type": "string"
+          },
+          "parameter_name": {
+            "type": "string"
+          },
+          "parameter_description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "description": {
+      "type": "string"
+    },
+    "endpoint_name": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    }
+  }
+}

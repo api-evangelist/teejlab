@@ -1,0 +1,21 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://teejlab.com/pricing/
+sources:
+- https://teejlab.com/pricing/
+name: TeejLab pricing
+audience: business-product
+pricing_basis: negotiated
+plans:
+- name: Free Trial
+  price_text: '0'
+  price: 0
+- name: Individual
+  price_text: '99'
+  price: 99
+- name: Academic
+  price_text: Let's Talk!
+- name: Corporate
+  price_text: Let's Talk!
+docs: https://teejlab.com/pricing/

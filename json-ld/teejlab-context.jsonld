@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "@vocab": "https://teejlab.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "teejlab": "https://teejlab.com/schema#",
+    "GetEdsnApiAgreementsIdResponse": "teejlab:GetEdsnApiAgreementsIdResponse",
+    "api_name": {
+      "@id": "teejlab:api_name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "teejlab:description",
+      "@type": "xsd:string"
+    },
+    "agreements": {
+      "@id": "teejlab:agreements",
+      "@container": "@list"
+    },
+    "GetEdsnApiAgreementsNameResponse": "teejlab:GetEdsnApiAgreementsNameResponse",
+    "GetEdsnApiAgreementsTimeResponse": "teejlab:GetEdsnApiAgreementsTimeResponse",
+    "Description": {
+      "@id": "teejlab:Description",
+      "@type": "xsd:string"
+    },
+    "GetEdsnApiBenchmarkRateLimitingResultResponse": "teejlab:GetEdsnApiBenchmarkRateLimitingResultResponse",
+    "datetime": {
+      "@id": "teejlab:datetime",
+      "@type": "xsd:string"
+    },
+    "result": {
+      "@id": "teejlab:result",
+      "@type": "xsd:string"
+    },
+    "test_case": {
+      "@id": "teejlab:test_case",
+      "@type": "xsd:string"
+    },
+    "PostEdsnApiBenchmarkRateLimitingResultResponse": "teejlab:PostEdsnApiBenchmarkRateLimitingResultResponse",
+    "PostEdsnApiBenchmarkRateLimitingTestResponse": "teejlab:PostEdsnApiBenchmarkRateLimitingTestResponse",
+    "info": {
+      "@id": "teejlab:info",
+      "@type": "xsd:integer"
+    },
+    "PostEdsnApiBenchmarkUploadSwaggerResponse": "teejlab:PostEdsnApiBenchmarkUploadSwaggerResponse",
+    "GetEdsnApiCategoriesResponse": "teejlab:GetEdsnApiCategoriesResponse",
+    "PostEdsnApiCvesearchRequest": "teejlab:PostEdsnApiCvesearchRequest",
+    "search_term": {
+      "@id": "teejlab:search_term",
+      "@type": "xsd:string"
+    },
+    "cvssv2_filter": {
+      "@id": "teejlab:cvssv2_filter",
+      "@type": "xsd:string"
+    },
+    "PostEdsnApiCvesearchResponse": "teejlab:PostEdsnApiCvesearchResponse",
+    "Content-Type": {
+      "@id": "teejlab:Content-Type",
+      "@type": "xsd:string"
+    },
+    "mapping": {
+      "@id": "teejlab:mapping"
+    },
+    "Content-Length": {
+      "@id": "teejlab:Content-Length",
+      "@type": "xsd:integer"
+    },
+    "PostEdsnApiCvesearchRequest2": "teejlab:PostEdsnApiCvesearchRequest2",
+    "cvssv3_filter": {
+      "@id": "teejlab:cvssv3_filter",
+      "@type": "xsd:string"
+    },
+    "year_published": {
+      "@id": "teejlab:year_published",
+      "@type": "xsd:string"
+    },
+    "PostEdsnApiCvesearchResponse2": "teejlab:PostEdsnApiCvesearchResponse2",
+    "GetEdsnApiCvesearchCveProductsResponse": "teejlab:GetEdsnApiCvesearchCveProductsResponse",
+    "associated_products": {
+      "@id": "teejlab:associated_products",
+      "@container": "@list"
+    },
+    "GetEdsnApiCvesearchVendorProductsResponse": "teejlab:GetEdsnApiCvesearchVendorProductsResponse",
+    "products": {
+      "@id": "teejlab:products",
+      "@container": "@list"
+    },
+    "GetEdsnApiCvesearchVendorsResponse": "teejlab:GetEdsnApiCvesearchVendorsResponse",
+    "vendors": {
+      "@id": "teejlab:vendors",
+      "@container": "@list"
+    },
+    "GetEdsnApiCvesearchVendorsResponse2": "teejlab:GetEdsnApiCvesearchVendorsResponse2",
+    "GetEdsnApiDataExampleResponse": "teejlab:GetEdsnApiDataExampleResponse",
+    "output_response": {
+      "@id": "teejlab:output_response",
+      "@type": "xsd:string"
+    },
+    "endpoint_id": {
+      "@id": "teejlab:endpoint_id",
+      "@type": "xsd:string"
+    },
+    "input_parameters": {
+      "@id": "teejlab:input_parameters"
+    },
+    "GetEdsnApiEndpointListResponse": "teejlab:GetEdsnApiEndpointListResponse",
+    "id": {
+      "@id": "teejlab:id",
+      "@type": "xsd:integer"
+    },
+    "endpoint": {
+      "@id": "teejlab:endpoint",
+      "@type": "xsd:string"
+    },
+    "method": {
+      "@id": "teejlab:method",
+      "@type": "xsd:string"
+    },
+    "GetEdsnApiEndpointParameterResponse": "teejlab:GetEdsnApiEndpointParameterResponse",
+    "parameter": {
+      "@id": "teejlab:parameter",
+      "@container": "@list"
+    },
+    "endpoint_name": {
+      "@id": "teejlab:endpoint_name",
+      "@type": "xsd:string"
+    },
+    "GetEdsnApiEndpointSearchResponse": "teejlab:GetEdsnApiEndpointSearchResponse",
+    "num_results": {
+      "@id": "teejlab:num_results",
+      "@type": "xsd:integer"
+    },
+    "num_pages": {
+      "@id": "teejlab:num_pages",
+      "@type": "xsd:integer"
+    },
+    "current_page": {
+      "@id": "teejlab:current_page",
+      "@type": "xsd:integer"
+    },
+    "page_size": {
+      "@id": "teejlab:page_size",
+      "@type": "xsd:integer"
+    },
+    "endpoints": {
+      "@id": "teejlab:endpoints",
+      "@container": "@list"
+    },
+    "PostEdsnApiGatewayRequest": "teejlab:PostEdsnApiGatewayRequest",
+    "i": {
+      "@id": "teejlab:i",
+      "@type": "xsd:string"
+    },
+    "timeout": {
+      "@id": "teejlab:timeout",
+      "@type": "xsd:string"
+    },
+    "PostEdsnApiGatewayResponse": "teejlab:PostEdsnApiGatewayResponse",
+    "GetEdsnApiNetworksUserScanMappingsResponse": "teejlab:GetEdsnApiNetworksUserScanMappingsResponse",
+    "GetEdsnApiNetworksUserScanMappingsResponse2": "teejlab:GetEdsnApiNetworksUserScanMappingsResponse2",
+    "scan_mappings": {
+      "@id": "teejlab:scan_mappings",
+      "@type": "xsd:string"
+    },
+    "GetEdsnApiNetworksUserScansResponse": "teejlab:GetEdsnApiNetworksUserScansResponse",
+    "scan_details": {
+      "@id": "teejlab:scan_details",
+      "@container": "@list"
+    },
+    "GetEdsnApiNetworksUserScansResponse2": "teejlab:GetEdsnApiNetworksUserScansResponse2",
+    "GetEdsnApiScannedProjectsResponse": "teejlab:GetEdsnApiScannedProjectsResponse",
+    "project_id": {
+      "@id": "teejlab:project_id",
+      "@type": "xsd:string"
+    },
+    "project_name": {
+      "@id": "teejlab:project_name",
+      "@type": "xsd:string"
+    },
+    "datetime_created": {
+      "@id": "teejlab:datetime_created",
+      "@type": "xsd:dateTime"
+    },
+    "GetEdsnApiSearchTimeResponse": "teejlab:GetEdsnApiSearchTimeResponse",
+    "GetEdsnApiSearchVendorResponse": "teejlab:GetEdsnApiSearchVendorResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "TeejLab API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects TeejLab's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-21) from openapi/_ae-authored/teejlab-openapi-generated.yml.",
+  "dcterms:created": "2026-10-21",
+  "dcterms:source": [
+    "openapi/_ae-authored/teejlab-openapi-generated.yml"
+  ]
+}

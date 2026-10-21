@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teejlab/main/json-schema/teejlab-post-edsn-api-cvesearch-response-schema.json",
+  "title": "PostEdsnApiCvesearchResponse",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/teejlab-openapi-generated.yml#/components/schemas/PostEdsnApiCvesearchResponse",
+  "type": "object",
+  "properties": {
+    "Content-Type": {
+      "type": "string"
+    },
+    "mapping": {
+      "type": "object",
+      "properties": {
+        "num_results": {
+          "type": "string"
+        },
+        "processed_search_term": {
+          "type": "string"
+        },
+        "search_term": {
+          "type": "string"
+        },
+        "vulnerabilities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "cve_description": {
+                "type": "string"
+              },
+              "cve_id": {
+                "type": "string"
+              },
+              "vendor": {
+                "type": "string"
+              },
+              "cvssv2_score": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              },
+              "cvssv3_severity": {
+                "type": "string"
+              },
+              "cvssv2_severity": {
+                "type": "string"
+              },
+              "cvssv3_score": {
+                "type": "string"
+              },
+              "year_published": {
+                "type": "integer"
+              },
+              "product": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Content-Length": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teejlab/main/json-schema/teejlab-get-edsn-api-scanned-projects-response-schema.json",
+  "title": "GetEdsnApiScannedProjectsResponse",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/teejlab-openapi-generated.yml#/components/schemas/GetEdsnApiScannedProjectsResponse",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "project_name": {
+      "type": "string"
+    },
+    "datetime_created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "scan_details": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "endpoint_url": {
+            "type": "string"
+          },
+          "api_name": {
+            "type": "string"
+          },
+          "api_version": {
+            "type": "string"
+          },
+          "vendor_name": {
+            "type": "string"
+          },
+          "endpoint_method": {
+            "type": "string"
+          },
+          "response_metadata": {
+            "type": "object",
+            "properties": {
+              "Via": {
+                "type": "string"
+              },
+              "Date": {
+                "type": "string"
+              },
+              "Allow": {
+                "type": "string"
+              },
+              "Server": {
+                "type": "string"
+              },
+              "Connection": {
+                "type": "string"
+              },
+              "Content-Type": {
+                "type": "string"
+              },
+              "Content-Length": {
+                "type": "string"
+              },
+              "Referrer-Policy": {
+                "type": "string"
+              },
+              "X-Frame-Options": {
+                "type": "string"
+              },
+              "X-Content-Type-Options": {
+                "type": "string"
+              }
+            }
+          },
+          "agreements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "server_info": {
+            "type": "object",
+            "properties": {
+              "server": {
+                "type": "string"
+              },
+              "hostcity": {
+                "type": "string"
+              },
+              "hostcountry": {
+                "type": "string"
+              },
+              "hostregion": {
+                "type": "string"
+              },
+              "hostisp": {
+                "type": "string"
+              },
+              "timezone": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "review status": {
+      "type": "string"
+    }
+  }
+}
